@@ -22,8 +22,11 @@ def add():
 def subtract():
     result = {}
     numbers = request.get_json()
-    result['result'] = int(numbers['first']) + int(numbers['second'])
-    return str(result['result'])
+    #result['result'] = int(numbers['first']) + int(numbers['second'])
+    #return str(result['result'])
+    res = int(numbers['first']) - int(numbers['second'])
+    return {'result':res}
+
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
