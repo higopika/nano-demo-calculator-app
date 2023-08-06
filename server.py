@@ -15,7 +15,8 @@ def add():
     result={}
     numbers = request.get_json()
     res = int(numbers['first']) + int(numbers['second'])
-    return json.dumps({'result':res})
+    #return json.dumps({'result':res})
+    return {'result':res}
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
